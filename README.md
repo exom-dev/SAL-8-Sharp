@@ -6,7 +6,7 @@ For more details, see the [SAL-8](https://github.com/exom-dev/SAL-8) repository.
 
 # Usage
 
-The wrapper is already documented (see the source file). Here's how to run a SAL-8 script:
+The wrapper is already documented (see the source file). Here's an example showcasing most of the wrapper functionality:
 
 ```cs
 using SAL8;
