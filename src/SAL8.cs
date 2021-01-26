@@ -5,7 +5,7 @@
  * Version 1.0.0 'INITUS' - This wrapper is NOT guaranteed to work with any other version of the implementation.
  *
  * This project is licensed under the MIT license.
- * Copyright (c) 2020-2021 The Exom Developers (https://github.com/exom-dev)
+ * Copyright (c) 2021 The Exom Developers (https://github.com/exom-dev)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction, including
