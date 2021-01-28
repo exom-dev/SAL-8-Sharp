@@ -77,6 +77,8 @@ namespace SAL8
         public extern static void Sal8VmDelete([In, Out] VM vm);
         [DllImport("SAL8.dll", EntryPoint = "sal8_vm_access_register", CallingConvention = CallingConvention.Cdecl)]
         public extern static byte Sal8VmAccessRegister([In, Out] VM vm, byte index);
+        [DllImport("SAL8.dll", EntryPoint = "sal8_vm_current_instruction_index", CallingConvention = CallingConvention.Cdecl)]
+        public extern static uint Sal8VmCurrentInstructionIndex([In, Out] VM vm);
         [DllImport("SAL8.dll", EntryPoint = "sal8_vm_load", CallingConvention = CallingConvention.Cdecl)]
         public extern static void Sal8VmLoad([In, Out] VM vm, Cluster cluster);
         [DllImport("SAL8.dll", EntryPoint = "sal8_vm_run", CallingConvention = CallingConvention.Cdecl)]
@@ -164,6 +166,7 @@ namespace SAL8
         private Cluster cluster;
         private IntPtr parser;
         private LabelMap labels;
+        private IntPtr ulabels;
 
         /// <summary>
         /// Initializes a new instance of the Compiler class, with the register count being 4.
@@ -374,6 +377,11 @@ namespace SAL8
         public uint GetInstructionCount()
         {
             return PInvoke.Sal8ClusterInstructionCount(ref cluster);
+        }
+
+        public uint GetCurrentInstructionIndex()
+        {
+            return PInvoke.Sal8VmCurrentInstructionIndex(this);
         }
 
         /// <summary>

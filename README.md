@@ -29,6 +29,10 @@ static void Main(string[] args) {
         
         /* while(!vm.Finished())
          *     vm.Run(1); // One at a time. You can do anything between the runs.
+         *
+         * // To get the index of the first instruction that will be executed next time you call Run(),
+         * // use the vm.GetCurrentInstructionIndex() function. You can combine this with Run(1) to create
+         * // a simple step-by-step debugging feature for your game/project.
          */
 
         // Outputs the values of all registers.
